@@ -20,6 +20,20 @@
         </div>
         
         <div id="main-content">
+            <!-- Sol Panel -->
+            <div id="left-panel">
+                <div class="slider-container">
+                    <label for="brush-size">Fırça<br>Kalınlığı</label>
+                    <!-- dikey görünüm için css ekleyeceğiz -->
+                    <input type="range" id="brush-size" min="5" max="50" value="20">
+                </div>
+                
+                <div class="toggle-container">
+                    <label for="mask-toggle">Taşırmayı Engelle</label>
+                    <input type="checkbox" id="mask-toggle" checked>
+                </div>
+            </div>
+
             <div id="canvas-container">
                 <canvas id="paint-canvas"></canvas>
             </div>
@@ -34,11 +48,6 @@
                 <div class="color-swatch" style="background-color: #4B0082;" data-color="#4B0082"></div>
                 <div class="color-swatch" style="background-color: #9400D3;" data-color="#9400D3"></div>
             </div>
-        </div>
-
-        <div id="bottom-bar">
-            <label for="brush-size">Fırça Kalınlığı:</label>
-            <input type="range" id="brush-size" min="5" max="50" value="20">
         </div>
     </div>
 

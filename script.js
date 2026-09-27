@@ -189,7 +189,9 @@ function startDrawing(e) {
     currentPath = [{x: lastX, y: lastY}];
 
     // Maske oluştur (Flood fill)
-    generateMask(Math.floor(lastX), Math.floor(lastY));
+    if (document.getElementById('mask-toggle').checked) {
+        generateMask(Math.floor(lastX), Math.floor(lastY));
+    }
     
     // Aktif çizimi temizle
     activeStrokeCtx.clearRect(0, 0, canvas.width, canvas.height);
@@ -218,9 +220,11 @@ function draw(e) {
     activeStrokeCtx.stroke();
 
     // Maskeyi uygula (sadece maske olan yerler kalsın)
-    activeStrokeCtx.globalCompositeOperation = 'destination-in';
-    activeStrokeCtx.drawImage(maskCanvas, 0, 0);
-    activeStrokeCtx.globalCompositeOperation = 'source-over';
+    if (document.getElementById('mask-toggle').checked) {
+        activeStrokeCtx.globalCompositeOperation = 'destination-in';
+        activeStrokeCtx.drawImage(maskCanvas, 0, 0);
+        activeStrokeCtx.globalCompositeOperation = 'source-over';
+    }
 
     render();
 }

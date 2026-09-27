@@ -106,31 +106,43 @@ canvas {
     border-color: #333;
 }
 
-#bottom-bar {
-    height: 70px;
+#left-panel {
+    width: 80px;
     background-color: #e0e0e0;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 0 20px;
-    border-top: 2px solid #ccc;
-    gap: 15px;
+    padding: 10px 0;
+    border-right: 2px solid #ccc;
+    gap: 20px;
 }
 
-#bottom-bar label {
-    font-size: 16px;
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+}
+
+.slider-container label {
+    font-size: 14px;
     font-weight: bold;
     color: #333;
+    margin-bottom: 10px;
 }
 
+/* Vertical slider */
 #brush-size {
-    flex: 1;
-    max-width: 300px;
-    height: 10px;
     -webkit-appearance: none;
+    appearance: none;
     background: #bbb;
     border-radius: 5px;
     outline: none;
+    width: 150px;
+    height: 10px;
+    transform: rotate(270deg);
+    margin-top: 70px;
 }
 
 #brush-size::-webkit-slider-thumb {
@@ -140,5 +152,26 @@ canvas {
     height: 25px;
     border-radius: 50%;
     background: #4CAF50;
+    cursor: pointer;
+}
+
+.toggle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.toggle-container label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.toggle-container input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
     cursor: pointer;
 }
