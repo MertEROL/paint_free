@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Çizim ve Boyama Oyunu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="icon.png">
+</head>
+<body>
+    <div id="app">
+        <div id="top-bar">
+            <button id="prev-btn" class="nav-btn">Önceki</button>
+            <button id="clear-btn" class="nav-btn">Temizle</button>
+            <button id="next-btn" class="nav-btn">Sonraki</button>
+        </div>
+        
+        <div id="main-content">
+            <div id="canvas-container">
+                <canvas id="paint-canvas"></canvas>
+            </div>
+            
+            <div id="palette">
+                <!-- 7 Ana Renk -->
+                <div class="color-swatch" style="background-color: #FF0000;" data-color="#FF0000"></div>
+                <div class="color-swatch" style="background-color: #FF7F00;" data-color="#FF7F00"></div>
+                <div class="color-swatch" style="background-color: #FFFF00;" data-color="#FFFF00"></div>
+                <div class="color-swatch" style="background-color: #00FF00;" data-color="#00FF00"></div>
+                <div class="color-swatch" style="background-color: #0000FF;" data-color="#0000FF"></div>
+                <div class="color-swatch" style="background-color: #4B0082;" data-color="#4B0082"></div>
+                <div class="color-swatch" style="background-color: #9400D3;" data-color="#9400D3"></div>
+            </div>
+        </div>
+
+        <div id="bottom-bar">
+            <label for="brush-size">Fırça Kalınlığı:</label>
+            <input type="range" id="brush-size" min="5" max="50" value="20">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

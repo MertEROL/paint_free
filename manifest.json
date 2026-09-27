@@ -1,0 +1,22 @@
+{
+    "name": "Çizim Oyunu",
+    "short_name": "Çizim Oyunu",
+    "description": "Çocuklar için sınırlardan taşırmayan boyama oyunu",
+    "start_url": "./index.html",
+    "display": "fullscreen",
+    "background_color": "#ffffff",
+    "theme_color": "#4CAF50",
+    "orientation": "portrait",
+    "icons": [
+      {
+        "src": "icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "icon.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+}
